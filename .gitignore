@@ -1,0 +1,36 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Virtual environments
+venv/
+env/
+*.venv/
+*.conda/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Data
+datasets/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# PyCharm
+.idea/
+
+# Logs / backups
+*.log
+*~
+*.bak
+*.swp
+
+# temp
+catboost_info/
