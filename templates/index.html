@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Предсказание рисков сердечного приступа</title>
+</head>
+<body>
+    <h2>Предсказание рисков сердечного приступа</h2>
+
+    <form method="post" action="/">
+        <label for="file_path">Введите путь к CSV файлу:</label><br>
+        <input type="text" id="file_path" name="file_path" size="50">
+        <button type="submit">Предсказать</button>
+    </form>
+
+    {% if predictions %}
+        <h3>Результаты:</h3>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>ID</th>
+                <th>Prediction</th>
+            </tr>
+            {% for row in predictions %}
+            <tr>
+                <td>{{ row.id }}</td>
+                <td>{{ row.prediction }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>
